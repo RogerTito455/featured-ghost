@@ -10,86 +10,113 @@ body {
     min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .container {
-    width: 50%;
+    width: 80%;
+    max-width: 800px;
     margin: 2rem auto;
     text-align: center;
     background-color: #E9F3FC;
-    padding: 7rem 2rem;
+    padding: 4rem 2rem;
     border-radius: 2rem;
-    
 }
+
 .content h1 { 
     font-size: 3rem;
     margin-bottom: 1rem;
 } 
-.container p{
-    margin: 0 auto;;
-    width: 70%;
+
+.container p {
+    width: 80%;
+    margin: 0 auto 2rem auto;
     text-align: center;
+}
+
+.container-figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.container-figures{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
 .container-figures figure {
-    margin-right: 2rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: 150px;
+    text-align: center;
 }
-.container-figures figure img{
-    height: 10rem;
-    margin-bottom: 2rem;
+
+.container-figures figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: border 0.3s ease;
 }
+
 .container-figures figure img:hover {
     border: 5px solid #19748F;
 }
 
 .subcontainer {
-    margin-top: 2rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 auto;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.ghost{
-    margin-left: 2rem;
-    width: 100%;
+.ghost {
+    flex: 1 1 100%;
+    text-align: center;
 }
+
 .ghost .price {
     font-size: 2rem;
 }
 
 .subcontainer .image {
-    margin-left: 2rem;
+    flex: 1 1 100%;
+    max-width: 300px;
+    text-align: center;
 }
-.subcontainer .image img{
-    width: 30vh;
+
+.subcontainer .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
-button{
+
+button {
     border: none;
     background-color: #19748F;
-    padding: 1em;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     color: white;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
-@media(max-width :768px) {
+@media(max-width: 768px) {
     .container {
-        width: 100%;
+        width: 90%;
+        padding: 3rem 1.5rem;
     }
-    .container-figures figure img{
-        height: 5rem;
+
+    .container-figures figure {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: 100px;
     }
+
+    .subcontainer .image img {
+        max-width: 100%;
+    }
+
     .subcontainer {
         flex-direction: column;
     }
-    .subcontainer .image {
-        margin-left: 0;
+
+    button {
+        width: 100%;
     }
 }
